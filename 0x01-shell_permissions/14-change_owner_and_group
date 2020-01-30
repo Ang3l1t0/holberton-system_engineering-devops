@@ -1,2 +1,2 @@
 #!/bin/bash
-chown u:betty g:holberton .
+chown u:betty g:holberton
