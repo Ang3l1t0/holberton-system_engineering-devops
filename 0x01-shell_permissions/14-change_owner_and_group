@@ -1,2 +1,2 @@
 #!/bin/bash
-chgrp u betty,g holberton 
+chown u:betty g:holberton .
