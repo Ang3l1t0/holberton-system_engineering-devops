@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# this script shows how to use if statements.
+x=1
+while [ $x -le 10 ]
+do
+    if [ $x -eq 9 ];
+    then
+        echo -e "Holberton School\nHi";
+    else
+        echo "Holberton School"
+    fi
+    x=$((x+1))
+done
