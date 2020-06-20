@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This Bash script that displays Holberton School 10 times with while.
+# This Bash script that displays Holberton School 10 times with until loop.
 counter=1
 until [ $counter -gt 10 ]
 do
