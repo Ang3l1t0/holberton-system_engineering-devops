@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# this script shows how to use if statements.
+# this script shows how to use if/elif/else statements.
 x=1
 while [ $x -le 10 ]
 do
