@@ -1,1 +1,2 @@
 #!/usr/bin/env bash
+kill -SIGKILL $(pgrep -f 4-to_infinity_and_beyond)
