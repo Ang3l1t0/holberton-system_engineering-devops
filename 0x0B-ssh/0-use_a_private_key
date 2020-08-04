@@ -3,4 +3,3 @@
 # key ~/.ssh/holberton with the user ubuntu
 
 ssh -i ~/.ssh/_holberton ubuntu@34.75.88.244
-
