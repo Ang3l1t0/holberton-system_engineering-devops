@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # Install your load balancer
 sudo apt-get -y update
-sudo apt-get -y install haproxy
+sudo apt-get install -y haproxy
 
 echo "
 frontend ang3lp
     bind *:80
     mode http
-    default_backend app
+    default_backend bockendnodes
 
-backend app
+backend bockendnodes
     balance roundrobin
     server 1546-web-01 34.75.88.244:80 check
     server 1546-web-02 34.230.70.136:80 check" >> /etc/haproxy/haproxy.cfg
