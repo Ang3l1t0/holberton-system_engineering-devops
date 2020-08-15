@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script to create a custom 404 page
+# Double the number of webservers
 apt -y update
 apt install -y nginx
 echo "Holberton School" > /var/www/html/index.html
