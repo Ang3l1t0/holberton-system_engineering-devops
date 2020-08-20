@@ -51,7 +51,7 @@ frontend www-https
         default_backend www-backend
 
 backend www-backend
-        redirect scheme https if !{ ssl_fc }
+        redirect scheme https code 301 if !{ ssl_fc }
         server 1546-web-01 34.75.88.244:80 check
         server 1546-web-02 34.230.70.136:80 check
 
