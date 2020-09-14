@@ -30,5 +30,5 @@ if __name__ == "__main__":
     # print output
     print(
         'Employee {} is done with tasks {}/{}:'
-        .format(user_list['name'], done_task, total_task))
-    print(*list_task, sep='\n')
+        .format(user_list['name'], done_task, total_task), end='\n\t ')
+    print(*list_task, sep='\n\t ')
