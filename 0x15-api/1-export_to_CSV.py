@@ -19,12 +19,14 @@ if __name__ == "__main__":
     # create csv file
     file_name = argv[1] + '.csv'
 
-    with open(file_name, 'w') as file:
-        user_data = csv.writer(file, delimiter=',', quoting=csv.QUOTE_ALL)
+    with open(file_name, mode='w') as f:
+        user_data = csv.writer(f, delimiter=',', quoting=csv.QUOTE_ALL)
         for data in todo_list:
             user_data.writerow(
-                [data['userId'],
-                 user_list['name'],
-                 data['completed'],
-                 data['title']]
+                [
+                    data['userId'],
+                    user_list['name'],
+                    data['completed'],
+                    data['title']
+                ]
             )
