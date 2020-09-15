@@ -23,8 +23,8 @@ if __name__ == "__main__":
         user_data = csv.writer(file, delimiter=',', quoting=csv.QUOTE_ALL)
         for data in todo_list:
             user_data.writerow(
-                [data["userId"],
+                [data['userId'],
                  user_list['name'],
-                 data["completed"],
-                 data["title"]]
+                 data['completed'],
+                 data['title']]
             )
