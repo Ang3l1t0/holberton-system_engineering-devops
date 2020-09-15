@@ -22,11 +22,5 @@ if __name__ == "__main__":
     with open(file_name, mode='w') as f:
         user_data = csv.writer(f, delimiter=',', quoting=csv.QUOTE_ALL)
         for data in todo_list:
-            user_data.writerow(
-                [
-                    data['userId'],
-                    user_list['name'],
-                    data['completed'],
-                    data['title']
-                ]
-            )
+            user_data.writerow([data['userId'], user_list['name'],
+                               data['completed'], data['title']])
