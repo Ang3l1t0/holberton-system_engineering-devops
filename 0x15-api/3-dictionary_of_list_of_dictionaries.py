@@ -24,9 +24,9 @@ if __name__ == "__main__":
         # create a dictionary inside a list
         for data in todo_list:
             user_task = {}
+            user_task["username"] = u_name['username']
             user_task["task"] = data['title']
             user_task["completed"] = data['completed']
-            user_task["username"] = u_name['username']
             json_list.append(user_task)
 
         # create a list inside dictionary
