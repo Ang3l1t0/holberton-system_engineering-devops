@@ -19,6 +19,7 @@ if __name__ == "__main__":
     # create csv file
     file_name = argv[1] + '.csv'
 
+    # opens csv file and write
     with open(file_name, mode='w') as f:
         user_data = csv.writer(f, delimiter=',', quoting=csv.QUOTE_ALL)
         for data in todo_list:
