@@ -1,19 +1,16 @@
 #!/usr/bin/python3
-"""Script to export data in the JSON format"""
-
+"""Export to JSON"""
 import json
 import requests
-from sys import argv
+import sys
+
 
 if __name__ == "__main__":
-    # get url by id
-    user = requests.get(
-        'https://jsonplaceholder.typicode.com/users/')
-
-    # convert to json
+    # get url by id:
+    user = requests.get('https://jsonplaceholder.typicode.com/users/')
     user_list = user.json()
+
     json_dict = {}
-    json_list = []
 
     for u_name in user_list:
         todo = requests.get(
@@ -21,7 +18,9 @@ if __name__ == "__main__":
             .format(u_name['id']))
         todo_list = todo.json()
 
-        # create a dictionary inside a list
+        json_list = []
+
+        # create a new dict with the user items
         for data in todo_list:
             user_task = {}
             user_task["username"] = u_name['username']
@@ -29,12 +28,10 @@ if __name__ == "__main__":
             user_task["completed"] = data['completed']
             json_list.append(user_task)
 
-        # create a list inside dictionary
         json_dict[u_name['id']] = json_list
 
-    # create json file
+    # json file name
     json_file = 'todo_all_employees.json'
-
-    # open json file and write
+    # insert items in file
     with open(json_file, mode='w') as jfile:
         json.dump(json_dict, jfile)
