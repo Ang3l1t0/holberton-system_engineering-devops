@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""returns a list containing the titles of all hot articles for a given subreddit"""
+"""returns a list of all hot articles for a given subreddit"""
 import requests
 
 
@@ -24,5 +24,5 @@ def recurse(subreddit, hot_list=[]):
         if not after:
             after = "STOP"
         hot_list = hot_list + [post.get('data', {}).get('title')
-                            for post in data.get('children', [])]
+                               for post in data.get('children', [])]
         return recurse(subreddit, hot_list, after)
