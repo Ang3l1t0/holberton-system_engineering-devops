@@ -26,4 +26,4 @@ _Developed by_
 
 - Github - [Ang3l1t0](https://github.com/Ang3l1t0)
 - Twitter - [@Ang3lp](https://twitter.com/Ang3lp)
-- LinkedIn - [angel-palma-martinez](https://www.linkedin.com/in/angel-palma-martinez-09b51822/)
+- LinkedIn - [angel-palma-martinez](https://www.linkedin.com/in/angel-palma-martinez)
